@@ -9,13 +9,13 @@ If you would like to contribute to the wiki, please let us know, and we would we
 
 Happy Trading!
 
-[Getting Started](/getting-started)
+[Getting Started](/docs/getting-started)
 
-[Trade Plans](/getting-started/trade-plans)
+[Trade Plans]/getting-started/trade-plans)
 
-[Setups](/getting-started/trade-plans/setups)
+[Setups]/getting-started/trade-plans/setups)
 
-[Setup Filters](/getting-started/trade-plans/setup-filters)
+[Setup Filters]/getting-started/trade-plans/setup-filters)
 
 ![final_jpg.jpg](/img/final_jpg.jpg)
 
