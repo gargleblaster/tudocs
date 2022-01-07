@@ -17,7 +17,7 @@ Happy Trading!
 
 [Setup Filters](/getting-started/trade-plans/setup-filters)
 
-![final_jpg.jpg](/final_jpg.jpg)
+![final_jpg.jpg](/img/final_jpg.jpg)
 
 
 
