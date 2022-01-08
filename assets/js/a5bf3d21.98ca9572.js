@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktudocs=self.webpackChunktudocs||[]).push([[3502],{2120:function(s){s.exports=JSON.parse('{"allTagsPath":"/tudocs/blog/tags","slug":"/tudocs/blog/tags/hola","name":"hola","count":1,"permalink":"/tudocs/blog/tags/hola"}')}}]);

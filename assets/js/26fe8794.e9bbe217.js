@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktudocs=self.webpackChunktudocs||[]).push([[483],{3392:function(e){e.exports=JSON.parse('{"permalink":"/tudocs/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"previousPage":null,"nextPage":null,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

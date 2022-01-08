@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktudocs=self.webpackChunktudocs||[]).push([[475],{7913:function(s){s.exports=JSON.parse('{"allTagsPath":"/tudocs/blog/tags","slug":"/tudocs/blog/tags/docusaurus","name":"docusaurus","count":4,"permalink":"/tudocs/blog/tags/docusaurus"}')}}]);
