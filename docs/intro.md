@@ -1,35 +1,23 @@
 ---
 sidebar_position: 1
 ---
+# Welcome to Trade Unafraid Documentation Site
+This is where you can learn everything about how to use Trade Unafraid.
 
-# Tutorial Intro
+We hope to get you up and running quickly and answer all of your questions here.
 
-Let's discover **Docusaurus in less than 5 minutes**.
+If you have unanswered questions, please ask in Discord or email support@tradeunafraid.com.
 
-## Getting Started
+If you would like to contribute to the docs, we would welcome your help!  The docs are written in Markdown using Docusaurus.  The repo is at https://github.com/gargleblaster/tudocs.  Make changes and create a pull request.  We would be very grateful!
 
-Get started by **creating a new site**.
+Happy Trading!
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+[Getting Started](/docs/Introduction/getting-started)
 
-## Generate a new site
+[Trade Plans]/getting-started/trade-plans)
 
-Generate a new Docusaurus site using the **classic template**:
+[Setups]/getting-started/trade-plans/setups)
 
-```shell
-npm init docusaurus@latest my-website classic
-```
+[Setup Filters]/getting-started/trade-plans/setup-filters)
 
-## Start your site
-
-Run the development server:
-
-```shell
-cd my-website
-
-npx docusaurus start
-```
-
-Your site starts at `http://localhost:3000`.
-
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and displays your changes.
+![final_jpg.jpg](/img/final_jpg.jpg)

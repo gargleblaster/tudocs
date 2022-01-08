@@ -1,3 +1,7 @@
+---
+title: MFE Retracement
+description: Maximum Favorable Excursion Retracement Exit Tactic
+---
 ## MFE Retracement
 
 This tactic creates a stop at some % retracement from the most profitable point achieved in a trade (in this document, this term will be called MFE, which is short for Maximum Favorable Excursion). There are several modes and settings for this tactic. The overall construct though hinges on two areas: 1) an activation point, and 2) a retracement amount. You essentially tell Trade Unafraid that once you are up by some activation amount, X, do not let my gains fall back beneath some retracement amount, Y.
