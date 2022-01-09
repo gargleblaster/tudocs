@@ -4,32 +4,29 @@ import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: 'Incredibly Powerful',
     Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Trade Unafraid watches dozens of charts, understands what matters to you, and dynamically reacts to price action.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Works *For* You',
     Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Trade Unafraid is your trading wingman, watching and reacting on your behalf when you're not able to.  It's like having a tireless, dedicated trading assistant always looking out for you.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Uncompromising',
     Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Whether you rely on Trade Unafraid's automation, use the powerful manual controls, or use some combination of the two, you *always* have the best possible trading mechanisms working for you to give you a trading edge.
       </>
     ),
   },
