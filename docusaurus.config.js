@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Trade Unafraid',
+  tagline: 'Precision Trading on Autopilot',
   url: 'https://gargleblaster.github.io',
   baseUrl: '/tudocs/',
   onBrokenLinks: 'throw',
@@ -43,10 +43,10 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'Trade Unafraid',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Trade Unafraid Logo',
+          src: 'img/TradeUnafraidWithTagLine.svg',
         },
         items: [
           {
@@ -79,16 +79,20 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Twitter',
+                href: 'https://twitter.com/TUnafraid',
+              },
+              {
+                label: 'Facebook',
+                href: 'https://www.facebook.com/TradeUnafraid',
+              },
+              {
+                label: 'YouTube',
+                href: 'https://www.youtube.com/user/TradeUnafraid/videos',
               },
               {
                 label: 'Discord',
                 href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
               },
             ],
           },
@@ -97,7 +101,7 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                to: '/blog',
+                to: 'http://blogspot.tradeunafraid.com/',
               },
               {
                 label: 'GitHub',
@@ -106,7 +110,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Grey Matter, LLC.  Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
