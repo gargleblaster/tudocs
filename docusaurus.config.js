@@ -22,6 +22,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/gargleblaster/tudocs/tree/main/packages/create-docusaurus/templates/shared/',
@@ -41,7 +42,7 @@ const config = {
         title: 'Trade Unafraid',
         logo: {
           alt: 'Trade Unafraid Logo',
-          src: 'img/TradeUnafraidWithTagLine.svg',
+          src: 'img/symbolonly.jpg',
         },
         items: [
           {
@@ -50,7 +51,6 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/gargleblaster/tudocs',
             label: 'GitHub',
@@ -87,7 +87,7 @@ const config = {
               },
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discord.gg/5F5DGTDHDs',
               },
             ],
           },

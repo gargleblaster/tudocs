@@ -13,7 +13,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Works *For* You',
+    title: 'Works For You',
     Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>

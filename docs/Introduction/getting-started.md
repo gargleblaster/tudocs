@@ -4,7 +4,7 @@ sidebar_position: 1
 # Getting Started
 Welcome to Trade Unafraid!
 
-Trade Unafraid is a unique and powerful trading platform.  It provides all of the capabilities of any other trading platform that you've used before, but it adds special features on top of that which you faster, more agile, and more automated.
+Trade Unafraid is a unique and powerful trading platform.  It provides all of the capabilities of any other trading platform that you've used before, but it adds special features on top of that which make you faster, more agile, and more automated.
 
 Trade Unafraid, which we will sometimes refer to as TU, is both a discretionary and algorithmic trading platform, giving the trader the power to automate their trades while preserving the ability to manually override at any time.
 

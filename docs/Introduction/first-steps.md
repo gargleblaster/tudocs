@@ -3,12 +3,6 @@ sidebar_position: 2
 ---
 # First Steps
 
-Welcome to Trade Unafraid!
-
-Trade Unafraid is a unique and powerful trading platform. It provides all of the capabilities of any other trading platform that you've used before, but it adds special features on top of that which make you faster, more agile, and more automated.
-
-Trade Unafraid, which we will sometimes refer to as TU, is both a discretionary and algorithmic trading platform, giving the trader the power to automate their trades while preserving the ability to manually override at any time.  
-
 ### Setting up your Trade Unafraid Account
 After subscribing to Trade Unafraid, you should receive three emails at the email address you provided.
 
@@ -18,7 +12,7 @@ After subscribing to Trade Unafraid, you should receive three emails at the emai
 
 Once you receive the email from Okta, follow the instructions to create your Okta account. This will be your login to your Trade Unafraid server. Once your Okta account is created, follow the link to your personal Trade Unafraid server found in the email from **tradeunafraidsender** to get started!
 
-*You may need to wait up to 30 minutes while we prepare your private server. If you still cannot access your server after 30 minutes, place contact us at support@tradeunafraid.com*
+*You may need to wait up to 30 minutes while we prepare your private server. If you still cannot access your server after 30 minutes, place contact us at support [at] tradeunafraid.com*
 
 ### Tradier Account
 Trade Unafraid currently uses Tradier as our exclusive brokerage (we plan to offer support for more brokerages in the future). If you already have a Tradier account, you just need to connect Trade Unafraid to it by granting access to trade on your behalf.
