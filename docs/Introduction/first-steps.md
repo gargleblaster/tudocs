@@ -14,6 +14,8 @@ Once you receive the email from Okta, follow the instructions to create your Okt
 
 *You may need to wait up to 30 minutes while we prepare your private server. If you still cannot access your server after 30 minutes, place contact us at support [at] tradeunafraid.com*
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/psI0V94jvNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### Tradier Account
 Trade Unafraid currently uses Tradier as our exclusive brokerage (we plan to offer support for more brokerages in the future). If you already have a Tradier account, you just need to connect Trade Unafraid to it by granting access to trade on your behalf.
 
