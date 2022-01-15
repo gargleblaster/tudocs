@@ -14,4 +14,6 @@ Happy Trading!
 
 [Getting Started](/Introduction/getting-started)
 
+[Catch-all](/CatchAll)
+
 ![final_jpg.jpg](/img/final_jpg.jpg)
