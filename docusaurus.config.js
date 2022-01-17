@@ -20,7 +20,7 @@ const config = {
     [
       '@docusaurus/plugin-google-gtag',
       {
-        trackingID: 'G-CN2B2PZHE',
+        trackingID: 'G-CN2B2PZHEY',
         anonymizeIP: true,
       },
     ],
