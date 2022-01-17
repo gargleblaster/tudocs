@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktudocs=self.webpackChunktudocs||[]).push([[2338],{4509:function(e){e.exports=JSON.parse('{"name":"configuration","permalink":"/tudocs/tags/configuration","docs":[{"id":"Introduction/user-preferences","title":"User Preferences","description":"","permalink":"/tudocs/Introduction/user-preferences"}],"allTagsPath":"/tudocs/tags"}')}}]);

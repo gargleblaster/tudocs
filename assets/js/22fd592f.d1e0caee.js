@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktudocs=self.webpackChunktudocs||[]).push([[1488],{7736:function(a){a.exports=JSON.parse('{"name":"analytics","permalink":"/tudocs/tags/analytics","docs":[{"id":"TradePlanManagement/trade-history","title":"Trade History","description":"","permalink":"/tudocs/TradePlanManagement/trade-history"}],"allTagsPath":"/tudocs/tags"}')}}]);
