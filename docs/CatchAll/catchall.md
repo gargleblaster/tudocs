@@ -1,11 +1,28 @@
 ---
 sidebar_position: 1
+sidebar_label: "Catch All"
 ---
 # Catch-all
 
 This is a catch-all bucket where you can find various short videos, answers to questions, and brief explanations.
 
 We will try to organize the information better over time, but at least it's available here.  Think of it as a treasure hunt.  ;-)
+
+----
+
+1/6/22
+
+Getting Acclimated
+
+just make sure you log in to tradier through TU so we can access live data for you:
+https://www.youtube.com/watch?v=psI0V94jvNY&list=PLKjQe4oyXLvJzJRT8cb8BQPGiYaQE78r9&index=10
+
+hey, so id start with this playlist here:
+https://www.youtube.com/watch?v=vjXUr7dLDoI&list=PLKjQe4oyXLvKmtBLmnVOcUMiFsMbRVNal
+
+this playlist is a tutorial on the user interface for managing a tradeplan:
+https://www.youtube.com/watch?v=QoSUGSVVG7Q&list=PLKjQe4oyXLvLfbp5lHNNrL3OkXeSTAiMO
+
 
 ----
 
@@ -31,6 +48,82 @@ https://www.screencast.com/t/PaEFAeVp71iA
 
 example of using "filter atr by pivot" + "use atr instead of pivot":
 https://discordapp.com/channels/775066360963006484/854065252823203850/900736765114077205
+
+----
+
+10/18/21
+
+5min video on how to use the Atr feature of candle magnitude
+https://www.screencast.com/t/5XJr5sLZhUe
+
+The example I used in the video was wday. With wday, lets say you were to take inside day break at 272.35. Wday has an atr of 6.93. 20% of the ATR will equal 1.39.
+
+Without this filter, wday would have pivots of: 273.55, 273.98, 274.98, 275.63, 277.58, 278.23 (The software would find more going further back in time, but for the sake of this example, we will stop here).
+
+With the above atr filter, the software will select pivots as follows:
+272.35 (entry) +1.39 (percent of atr) = 273.74. This means that the first pivot of 273.55 will be ignored. The first pivot chosen will be 273.98.
+
+273.98 (last pivot) +1.39=275.37. The 274.98 pivot will be ignored, and the 275.63 pivot will be used next instead.
+
+275.63 (last pivot) + 1.39 = 277.02. The next pivot of 277.58 will be used next.
+
+277.58 (last pivot) + 1.39 = 278.97. the pivot at 278.23 will be ignored.
+
+Therefore, we are left with pivots at 273.98, 275.63, and 277.58
+
+
+and quick example here... this is saying that if the first pivot is within 25% of the ATR from the entry price, to skip this pivot, and use the next.
+![atr3.png](atr3.png)
+
+so if you look at pins, the ATR on TOS using 14 candles back on the daily chart and wilders is 1.78. 25% of that is .45.
+
+The way the software works is as follows: Let's say you were to take inside day break on pins at 53.27. The software will go 53.27+.45=53.72. Any pivot that can potentially be the "first pivot" will be ignored. this means that first pivot on the 3 bar at 53.4 will be passed. the next pivot at 54.03 will be used instead. once the first pivot is found, this filter is deactivated
+this example, is saying to filter all pivots by 20% of the ATR. this is different than the first filter in that it will not only apply to the first pivot, but to all pivots found after
+![atr4.png](atr4.png)
+
+
+----
+
+10/8/21
+
+a quick video explaining the feature addition of the restart button to "persist if filter/validation failure"
+https://www.screencast.com/t/Mkx8QxCQl8a
+
+----
+
+10/13/21
+
+how you can use saved templates to quickly load up tradeplans
+https://www.screencast.com/t/AM6Zu9TO8
+
+the simplest way is to use persist if filter failed validation. this will allow you to manually take over a tradeplan that has been filtered out
+https://www.screencast.com/t/CeYEWJ9iom
+there are about 3 other ways, but let me know if that does it for you. if it doesnt, ill gladly go over the others
+
+----
+
+10/20/21
+
+use ATR instead of a pivot that is too far out
+https://www.screencast.com/t/ZVqjV9kyzQ5O
+
+the example I used was facebook. Facebook has an atr of 8, and the 3 nearest pivots were 345.03, 345.23, 349.6
+![atr1.png](atr1.png)
+lets say we use the following configuration for magnitudes. This will make sure pivots are spaced by at least 10% of the atr (by filtering any magnitude within 10% of atr), and it will also make sure that if the next magnitude is more than 30% of atr away, it will use 30% of the atr plus the last pivot, as the next pivot.
+![atr2.png](atr2.png)
+So with an entry of 342.5, the software will interact as follows:
+10% of atr is 0.8 (for filter). 30% of atr is 2.4 (to use mag instead).
+
+a) magnitude 345.03. This passes "filter all mag", as it is more than 0.8 away from the entry of 342.
+However, it is further than 344.9 (342.5 entry+2.4 atr), which is 30% of the ATR away from the entry price. The first pivot therefore will be selected based off the ATR at 344.9.
+
+b) magnitude 345.23. This fails "filter all mag", as it is less than 0.8 away from the previous pivot of 344.9
+
+c) magnitude. 349.6. This passes "filter all mag", as it is more than 0.8 away from the last pivot of 344.9. However, it is further than 347.3 (344.9 entry+2.4 atr), which is 30% of the ATR away from the last pivot. The first pivot therefore will be selected based off the ATR at 347.3.
+
+----
+
+10/21/21
 
 To explain the "filter all mag" and "% of ATR as mag", let's use QS as an example. let's say we set up a tradeplan to enter long on the break of inside day at 25.35
 ![QS.png](QS.png)
@@ -96,6 +189,74 @@ https://www.screencast.com/t/OJexdrFkiy4
 
 ----
 
+9/1/21
+
+brief overview on how to manually select options
+https://www.screencast.com/t/LglWLOla
+
+in depth explanation of working the order:
+https://www.screencast.com/t/kexL5Mkykti
+
+Loss Limit and Grab Cents
+![grabcents.png](grabcents.png)
+
+----
+
+9/3/21
+
+this setup will setup a trigger based on the break of yesterdays high/low (depending on if you are long/short trade direction). validate candle will say if the setup opens above yesterdays high, filter out the trade (most ppl like to have it open as a 1, and then enter on the break)
+![candletrigger.png](candletrigger.png)
+
+----
+
+8/24/21
+![oldUIcontrols.png](oldUIcontrols.png)
+
+----
+
+8/10/21
+
+Two ways to trade ORBs
+https://youtu.be/osyXHmcZz_Y
+
+----
+
+7/7/21
+
+Juggling multiple positions
+https://youtu.be/oGtYhDW-pOw
+
+----
+
+9/23/21
+
+a very brief orientation for some of the new UI controls  
+https://www.screencast.com/t/LYzc8trET
+
+----
+
+10/28/21
+
+Sharing and importing Trade Plan templates
+https://www.screencast.com/t/2jgsxpYzaN
+
+----
+
+10/21/21
+
+Candle Pattern setup a la #TheStrat
+https://www.screencast.com/t/YfneVsG9
+
+----
+
+Ratchet Brackets
+https://www.youtube.com/watch?v=JhJfpjeGvAc&ab_channel=TradeUnafraid
+
+Ratchet Bracket trailing stop
+https://www.youtube.com/watch?v=939XgSg8URc&ab_channel=TradeUnafraid
+
+----
+
 1/13/22
 
 Underlying Price Exit:
@@ -140,7 +301,7 @@ https://www.screencast.com/t/MqLhZj1r
 11/23/21
 
 editing candle mag exit in new UI
-https://discordapp.com/channels/775066360963006484/912087423956172800/912718373278867497
+https://www.screencast.com/t/AR9izxst1ERZ
 
 how to "manipulate tu" to be able to trade like you would on another platform. ie enter from an existing chart, manual exits that type of stuff. It is a bit of a hack, but it is effective
 https://www.screencast.com/t/wYpQrAoO
