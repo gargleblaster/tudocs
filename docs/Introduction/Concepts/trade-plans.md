@@ -1,6 +1,7 @@
 ---
 sidebar_position: 4
 sidebar_label: Trade Plans
+tags: ["getting started", "templates"]
 ---
 ## Trade Plans
 Trade Unafraid is built around the concept of Trade Plans.  The only way to trade is within the context of a Trade Plan.  Trade Plans are comprised of a setup, setup filters, entry tactics, position tactics, and exit tactics.

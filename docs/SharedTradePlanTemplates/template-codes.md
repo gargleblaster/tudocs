@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 sidebar_label: "Shared Templates"
+tags: ["templates"]
 ---
 
 

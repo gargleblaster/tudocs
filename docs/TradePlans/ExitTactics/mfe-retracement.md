@@ -1,6 +1,7 @@
 ---
 title: MFE Retracement
 description: Maximum Favorable Excursion Retracement Exit Tactic
+tags: ["exit tactics"]
 ---
 ## MFE Retracement
 

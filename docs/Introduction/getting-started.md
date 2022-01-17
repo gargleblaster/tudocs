@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+tags: ["getting started"]
 ---
 # Getting Started
 Welcome to Trade Unafraid!

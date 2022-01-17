@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+tags: ["exit tactics"]
 ---
 # Exit Tactics
 

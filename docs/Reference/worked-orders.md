@@ -1,5 +1,6 @@
 ---
 sidebar_position: 5
+tags: ["trading"]
 ---
 # Worked Orders
 You can set up a Trade Plan to try to get filled inside the spread.  This is known as "price improvement," and it can help a lot to get a better price.  It really helps if you can do it both on the way in (opening) and on the way out (closing).

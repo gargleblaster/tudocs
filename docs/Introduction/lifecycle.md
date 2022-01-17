@@ -1,6 +1,7 @@
 ---
 sidebar_position: 5
 sidebar_label: Lifecycle
+tags: ["templates"]
 ---
 ## The Trade Plan Lifecycle
 By default, a Trade Plan is active from the time it is created, waiting for a setup to trigger and pass any filters, through the time when its quantity is non-zero, i.e. in a trade, and then terminates once the trade is closed, i.e. quantity returns to zero.  The default behavior of a Trade Plan is to disappear from the screen once it terminates.

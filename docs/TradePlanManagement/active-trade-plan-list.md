@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 sidebar_label: Active Trade Plan List
+tags: ["trading"]
 ---
 # Active Trade Plan List
 

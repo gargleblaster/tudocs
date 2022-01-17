@@ -1,5 +1,6 @@
 ---
 sidebar_position: 5
+tags: ["getting started"]
 ---
 # Soft Orders
 At this point, you may be wondering how Trade Unafraid is able to accomplish what it does, allowing your Trade Plan to have so many ways to exit the same position.  If a broker won't accept this, how does it work?  Part of the magic lies in the use of soft orders.

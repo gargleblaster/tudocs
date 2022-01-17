@@ -1,5 +1,6 @@
 ---
 sidebar_position: 15
+tags: ["setups"]
 ---
 # Setups
 The list of setups available in Trade Unafraid continues to grow to meet users' needs.
