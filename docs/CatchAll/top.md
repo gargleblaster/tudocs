@@ -2,7 +2,6 @@
 sidebar_position: 1
 sidebar_label: "Catch All"
 tags: ["exit tactics", "setups", "entry tactics", "templates"]
-
 ---
 # Catch-all
 

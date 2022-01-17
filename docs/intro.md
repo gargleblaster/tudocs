@@ -14,6 +14,8 @@ Happy Trading!
 
 [Getting Started](/Introduction/getting-started)
 
-[Catch-all](/CatchAll)
+[Catch-all](/CatchAll/top)
+
+[Screenshots of UI tooltips (PDF)](/pdf/TradeUnafraidEmbeddedTooltips.pdf)
 
 ![final_jpg.jpg](/img/final_jpg.jpg)
