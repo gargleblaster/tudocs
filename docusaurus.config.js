@@ -16,6 +16,16 @@ const config = {
   organizationName: 'gargleblaster', // Usually your GitHub org/user name.
   projectName: 'tudocs', // Usually your repo name.
 
+  plugins: [
+    [
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'G-CN2B2PZHE',
+        anonymizeIP: true,
+      },
+    ],
+  ],
+
   presets: [
     [
       'classic',

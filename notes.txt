@@ -1,0 +1,5 @@
+1. Clean up deployment per https://docusaurus.io/docs/deployment
+2. Set up CNAME to change domain from https://gargleblaster.github.io/tudocs/ to https://docs.tradeunafraid.com
+3. Figure out use of Google Tag Manager with Docusaurus
+4. Embed screencasts?
+5.
