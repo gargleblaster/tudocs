@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktudocs=self.webpackChunktudocs||[]).push([[5334],{2926:function(e){e.exports=JSON.parse('{"name":"grab cents","permalink":"/tudocs/tags/grab-cents","docs":[{"id":"Reference/grab_cents","title":"Grab Cents Exit Tactic","description":"Overview","permalink":"/tudocs/Reference/grab_cents"}],"allTagsPath":"/tudocs/tags"}')}}]);

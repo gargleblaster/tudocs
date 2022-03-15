@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktudocs=self.webpackChunktudocs||[]).push([[7428],{6600:function(t){t.exports=JSON.parse('{"name":"atr trail","permalink":"/tudocs/tags/atr-trail","docs":[{"id":"Reference/atr_trail","title":"ATR Trail Exit Tactic","description":"Overview","permalink":"/tudocs/Reference/atr_trail"}],"allTagsPath":"/tudocs/tags"}')}}]);

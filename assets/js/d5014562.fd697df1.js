@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktudocs=self.webpackChunktudocs||[]).push([[1638],{4371:function(e){e.exports=JSON.parse('{"name":"ratchet bracket","permalink":"/tudocs/tags/ratchet-bracket","docs":[{"id":"Reference/ratchet_bracket","title":"Ratchet Bracket Exit Tactic","description":"Overview","permalink":"/tudocs/Reference/ratchet_bracket"}],"allTagsPath":"/tudocs/tags"}')}}]);
