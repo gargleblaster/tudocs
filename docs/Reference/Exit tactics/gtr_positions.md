@@ -15,7 +15,7 @@ The Green-to-Red Positions Exit Tactic is ...
 ## Notes
 
 ## See also
-Green-to-Red Candles
+Green-to-Red Positions
 
 ## Video
 
