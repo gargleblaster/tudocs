@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktudocs=self.webpackChunktudocs||[]).push([[4166],{6527:function(e){e.exports=JSON.parse('{"name":"candle trail","permalink":"/tudocs/tags/candle-trail","docs":[{"id":"Reference/candle_trail","title":"Candle Trail Exit Tactic","description":"Overview","permalink":"/tudocs/Reference/candle_trail"}],"allTagsPath":"/tudocs/tags"}')}}]);

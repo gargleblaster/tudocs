@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktudocs=self.webpackChunktudocs||[]).push([[5074],{9948:function(e){e.exports=JSON.parse('{"name":"mfe retracement","permalink":"/tudocs/tags/mfe-retracement","docs":[{"id":"Reference/mfe_retracement","title":"MFE Retracement Exit Tactic","description":"Overview","permalink":"/tudocs/Reference/mfe_retracement"}],"allTagsPath":"/tudocs/tags"}')}}]);
