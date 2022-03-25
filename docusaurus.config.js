@@ -35,7 +35,7 @@ const config = {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/gargleblaster/tudocs/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/gargleblaster/tudocs/tree/main/',
         },
         blog: false,
         theme: {
