@@ -142,9 +142,6 @@ https://www.screencast.com/t/LglWLOla
 in depth explanation of working the order:
 https://www.screencast.com/t/kexL5Mkykti
 
-Loss Limit and Grab Cents
-![grabcents.png](grabcents.png)
-
 ----
 
 9/3/21

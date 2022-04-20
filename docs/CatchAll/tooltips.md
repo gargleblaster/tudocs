@@ -577,39 +577,6 @@ The idea behind this tactic is to catch headFakes on candles, in which a breakou
 
 We calculate hours by market open, 9:30 am. If you use another platform and have pre market on, you might end up having a different candle open time than us. For example, if you trade the hour charts and have premarket on on TOS, the hourly candle starts at 9:00 am, since they are calculating since 4 am. As of now, we are always starting from 9:30 am.
 
-### Grab Cents:
-
-This tactic places resting orders for specific profit targets you hope to reach. Once all the resting orders are completed, you can start a trail on the position, hoping to grab as much additional profit as you can.
-
-**Ex**: let's say you take a position of quantity 5. You would like to close 2 qty if the position ever gains 10 cents, another 2 if the position ever gains 25 cents, and leave a trail afterwards. That's what this tactic accomplishes.
-
-#### params:
-
-**grab cents mode**:
-
-Whether you would like to set up the quantity your resting orders via percentage of the position, or through quantity per order.
-$ per level:
-
-How many cents per order you would like to take for profit. This is set up relative to the current avg fill price of the position. Let's say you have a position with average fill price of 100, and you would like to take profits on a 25,50, and 75 cent gain. You would provide us a list: .25,.5,.75, and we would translate that into orders with limit prices: 100.25, 100.5, and 100.75.
-
-**quantity/percentage per level**
-
-Depending on the grab cents mode, define the quantity per resting order. If you choose percentage, and would like to place 3 resting orders, each accounting for 25% of your position, you would supply us a list: 25,25,25. Similarly, if you would like us to sell orders in quantities of 4,3, and then 2, you would select grab cents mode as quantity, and provide us a list here of: 4,3,2.
-
-**trail quantity/percentage**
-
-Depending on grab cents mode, the pct or the quantity of the position you would like to leave as a trail. If position is of size 5, grab cents mode is percentage, and the trail percentage is 20%, the trail will kick in once position has size 1. Similarly, if instead of percentage, you went with grab cents mode of quantity, and the trail quantity was set to 1, when the position has size 1, this trail will kick in.
-
-**trail amount**
-
-The amount of cents that you would like to have your trail set for. This trail will adjust in the direction of your position. So if long and your trail is .25, and current price is 100, the trail will be set to 99.75. If price moves to 100.25, the trail will be adjusted to 100. If it hits 100, the position will flatten.
-
-**NOTE**:
-A) this trail differs from underlying price trail and position price trail in the following ways: 1) it is a trail on the position and not the underlying.
-2) it only takes effect once your resting orders have filled, unlike the price trails, which are in effect immediately.
-   B) Additionally, the grab cents percentages do not have to equal 100%. If you would like to place 50% of your position on grab cents, and have the rest rely on a candle trail, you can do that.
-   C) If you elect grab cents percentage mode and the quantities do not match perfectly, we do our best to round efficiently.
-
 
 
 ### Underlying Break Price/Break Price:

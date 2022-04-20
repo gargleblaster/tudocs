@@ -149,8 +149,8 @@ this example, is saying to filter all pivots by 20% of the ATR. this is differen
 TBD
 
 ## See also
-Grab Cents
-Ratchet Brackets
+[Grab Cents](grab_cents.md)
+[Ratchet Brackets](ratchet_bracket.md)
 
 ## Video
 
