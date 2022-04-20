@@ -25,62 +25,6 @@ this playlist is a tutorial on the user interface for managing a tradeplan:
 https://www.youtube.com/watch?v=QoSUGSVVG7Q&list=PLKjQe4oyXLvLfbp5lHNNrL3OkXeSTAiMO
 
 
-----
-
-12/7/21
-
-Candle Magnitude Exit Tactic
-
-basic explanations:
-https://wiki.tradeunafraid.com/getting-started/trade-plans/exit-tactics#candle-magnitude
-
-editing candle mag targets and stops:
-https://www.screencast.com/t/AR9izxst1ERZ
-
-what are the first stop and first target stop video:
-https://www.screencast.com/t/JIAcJFvv
-
-generating pivots based off atr when no magnitudes remain:
-generating pivots based off of the atr when no pivots remain
-https://www.screencast.com/t/q1vKfNgbcbK
-
-how to "manipulate" the candle magnitudes exit to ignore pivots, and only take profits at specific %'s of ATR
-https://www.screencast.com/t/PaEFAeVp71iA
-
-example of using "filter atr by pivot" + "use atr instead of pivot":
-https://discordapp.com/channels/775066360963006484/854065252823203850/900736765114077205
-
-----
-
-10/18/21
-
-5min video on how to use the Atr feature of candle magnitude
-https://www.screencast.com/t/5XJr5sLZhUe
-
-The example I used in the video was wday. With wday, lets say you were to take inside day break at 272.35. Wday has an atr of 6.93. 20% of the ATR will equal 1.39.
-
-Without this filter, wday would have pivots of: 273.55, 273.98, 274.98, 275.63, 277.58, 278.23 (The software would find more going further back in time, but for the sake of this example, we will stop here).
-
-With the above atr filter, the software will select pivots as follows:
-272.35 (entry) +1.39 (percent of atr) = 273.74. This means that the first pivot of 273.55 will be ignored. The first pivot chosen will be 273.98.
-
-273.98 (last pivot) +1.39=275.37. The 274.98 pivot will be ignored, and the 275.63 pivot will be used next instead.
-
-275.63 (last pivot) + 1.39 = 277.02. The next pivot of 277.58 will be used next.
-
-277.58 (last pivot) + 1.39 = 278.97. the pivot at 278.23 will be ignored.
-
-Therefore, we are left with pivots at 273.98, 275.63, and 277.58
-
-
-and quick example here... this is saying that if the first pivot is within 25% of the ATR from the entry price, to skip this pivot, and use the next.
-![atr3.png](atr3.png)
-
-so if you look at pins, the ATR on TOS using 14 candles back on the daily chart and wilders is 1.78. 25% of that is .45.
-
-The way the software works is as follows: Let's say you were to take inside day break on pins at 53.27. The software will go 53.27+.45=53.72. Any pivot that can potentially be the "first pivot" will be ignored. this means that first pivot on the 3 bar at 53.4 will be passed. the next pivot at 54.03 will be used instead. once the first pivot is found, this filter is deactivated
-this example, is saying to filter all pivots by 20% of the ATR. this is different than the first filter in that it will not only apply to the first pivot, but to all pivots found after
-![atr4.png](atr4.png)
 
 
 ----
@@ -408,8 +352,6 @@ an otm1 option saved config that you can use as an "enter now tradeplan": https:
 
 12/21/21
 
-How to "manipulate" the candle magnitudes exit to ignore pivots, and only take profits at specific %'s of ATR
-https://www.screencast.com/t/PaEFAeVp71iA
 
 Generating pivots based off of the atr when no pivots remain
 https://www.screencast.com/t/q1vKfNgbcbK
@@ -417,7 +359,5 @@ https://www.screencast.com/t/q1vKfNgbcbK
 How to alter work order settings of an existing tradeplan:
 https://www.screencast.com/t/mHtZ20oEaDr
 
-How to add an ATR trail (or modify it)
-https://www.screencast.com/t/pGe3MGuq
 
 
