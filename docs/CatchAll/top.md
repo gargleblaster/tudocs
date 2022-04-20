@@ -289,26 +289,6 @@ https://www.screencast.com/t/amTLGD1hIm
 
 ----
 
-12/30/21
-
-grab cent with qty unit of percentage, profit unit of percentage examples.
-
-for all these examples, let's assume a fill price of $1 and qty of 8.
-
-_Image One_
-
-the first image, is saying put one order out for a 25% gain for 25% of the position, and another for 50% gain for another 25% of the position. For the last 50%, create a 25% position price trail (like youd have on TOS) that kicks in once that order is filled. This 25% is based on the original fill price.
-
-So this translates to 2 orders: order1 will have a qty of 2 and limit price of 1.25, order2 will have a qty of 2 and limit price of 1.5. A $.25 price trail (25%) will be created once those 2 orders fill
-
-_Image two_
-
-the second image, is saying put one order out for a 25% gain for 25% of the position, another for 50% gain for another 25% of the position, and one more for a 100% gain on 50% of the position. There is no price trail.
-
-So this translates to 3 orders: order1 will have a qty of 2 and limit price of 1.25, order2 will have a qty of 2 and limit price of 1.5, and order3 will have a qty of 4 and a limit price of 2.
-
-![GCimage1.png](GCimage1.png)
-![GCimage2.png](GCimage2.png)
 
 ----
 

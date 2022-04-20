@@ -26,6 +26,7 @@ As the price changes and more candles are defined, the calculated ATR will be re
 
 ## See also
 [Candle Trail](candle_trail.md)
+
 [MFE Retracement](mfe_retracement.md)
 
 ## Video
