@@ -626,25 +626,6 @@ Flattens a trade plan by breaking through a support level. If long, will need to
 
 Ideally, this tactic should be added after the position is taken, and not via the trade plan form, once you know what the current price is. In the above example, it would be quite frustrating if a position exited immediately bc of a support price at 300, and the current price when entering into the position was 300.02.
 
-### Candle Trail:
-
-Sets a candle trail on a position. If long, and the current price breaches the previous candle's low, or if short, and the current price breaches the previous candles high, we flatten the position.
-
-#### params:
-
-**candleDuration**: The duration of the candle you would like to track.
-
-**Use pre/postMarketData**: Let's say you have 5 min candles, and you enter a position at 9:33, ie, before the first candle appears. If this is set to false, it will wait till 9:35 for the first candle to set the trail. If it is true, it will use the last candle leading up till 9:30 for the candle trail.
-
-**breakBy**: the amount the previous candle high/low needs to be broken by to close. If long and the previous candle low was 100, and this field is set to .1, it will wait till a break of 99.9 to flatten.
-
-**NOTE**:
-
-When we set the trail, we get both the current candle and the previous candle. If you are long and the current candle low is lower than the previous candle's low, or if you are short and the current candle high is higher than the previous candle's high, we use the current candle to set the trail.
-
-We calculate hours by market open, 9:30 am. If you use another platform and have pre market on, you might end up having a different candle open time than us. For example, if you trade the hour charts and have premarket on on TOS, the hourly candle starts at 9:00 am, since they are calculating since 4 am. As of now, we are always starting from 9:30 am.
-
-(Also see [Candle Trail](/TradePlans/ExitTactics/exit-tactics.md#candle-trail))
 
 ### MFE Retracement
 
