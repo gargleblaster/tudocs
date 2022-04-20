@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktudocs=self.webpackChunktudocs||[]).push([[5919],{7705:function(s){s.exports=JSON.parse('{"name":"loss limit","permalink":"/tudocs/tags/loss-limit","docs":[{"id":"Reference/Exit tactics/loss_limit","title":"Loss Limit Exit Tactic","description":"Overview","permalink":"/tudocs/Reference/Exit tactics/loss_limit"}],"allTagsPath":"/tudocs/tags"}')}}]);
