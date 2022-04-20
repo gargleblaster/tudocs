@@ -189,13 +189,6 @@ https://www.screencast.com/t/2jgsxpYzaN
 Candle Pattern setup a la #TheStrat
 https://www.screencast.com/t/YfneVsG9
 
-----
-
-Ratchet Brackets
-https://www.youtube.com/watch?v=JhJfpjeGvAc&ab_channel=TradeUnafraid
-
-Ratchet Bracket trailing stop
-https://www.youtube.com/watch?v=939XgSg8URc&ab_channel=TradeUnafraid
 
 ----
 

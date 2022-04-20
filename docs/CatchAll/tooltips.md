@@ -468,69 +468,6 @@ Underlying Price Exit is an exit tactic used for adding price targets on the und
 
 **Price | Pct. per Level**: Each level is defined by a price and percentage pair. The percentage determines what percentage of the current position size should be closed at the defined price level. You must add at least one of these pairs to use this tactic. It is advised that you consult the current underlying price to ensure that all levels are above the current price(below for a short trade).
 
-### Ratchet Bracket:
-
-This tactic creates brackets of closes around a position. As the position moves and hits targets of the bracket, the bracket shifts.
-
-**Ex**: Let's say you open an AAPL long position at 450 with qty of 10. You would like to create resting orders at certain intervals that close as price moves in your favor, and flatten if the position hits the bottom of the bracket. As each resting order is hit, the stop is "ratcheted up". So let's say we'll define our target as 10 cents per bracket, and our stop is as 20 cents per bracket, and we'd like to sell 1 qty as each target is hit. The tactic will instantly set up ten close orders at ten cent intervals, 450.1, 450.2... all the way up until 451 (in which your position qty of 10 will fill). The first stop is set at 449.8 (450-.2), and with each fill, it is adjusted to the new bottom of the bracket. So when the 450.1 fills, it is adjusted to 449.9. When 450.2 fills, it is adjusted to 450, and so on.
-
-#### parameters:
-
-**Mode**:
-
-the mode that you would like to configure the ratchet bracket brackets. With equal interval, for each bracket, the target, stop, and qty are the same. Currently, equal interval is the only available mode.
-
-**target**:
-
-The target amount that signals to advance to the next bracket. The boundary of the bracket that is in the direction of the position (top if long, bottom if short) become the resting order prices. If the ratchet bracket trail has begun, this price signals to adjust the trail to the next bracket. If Qty basis is either percent or quantity, then this number should be entered as a number of cents. It would be saying to place resting orders at 10 cent increments. If you choose profit, then this should number should entered as a dollar amount (such as 20$ brackets). More on the profit mode below...
-
-**stop**:
-
-The stop that signals to flatten the position. This is set for each bracket, and adjusted in the direction of the position upon each order fill.
-
-If Qty basis is either percent or quantity, then this number should be entered as a number of cents. It would be saying to flatten at 10 cent below whatever the target of the previous bracket was.
-
-If you choose profit, then this should number should entered as a dollar amount (such as 20$ brackets). More on the profit mode below...
-
-**quantity basis value per bracket**:
-
-The qty basis value that should be used per bracket. For example, if you set qtyBasis to PERCENT, and this to 10%, if your position qty is 10, each bracket will have a resting order of qty 1 (10*.1). If you set qty basis to quantity, and set this field with a value of 2, it will sell 2 qty per bracket. With profit, you supply us the number of brackets. more on that below...
-
-**trail quantity basis value per bracket**:
-
-Let's say you have position qty of 10, and you would like to only have 8 brackets, and leave 2 to trail. If your qty basis is profit or percent, You would set this field to .2. If it is quantity, you would set this to 2. This works the same as way as any bracket does, except when the target bracket hits, instead of placing a resting order, the target price and stop price is adjusted up another bracket. Let's say you are long, all your resting order orders are filled, the last order price was at 100, the target dollars is at .1, and the stop cents is .2. The first target price would be 100.1, and the stop 99.8. If 100.1 is hit, then the next target price becomes 100.2, and the stop 99.9. If 99.9 would then be hit, the position would flatten.
-
-**qtyBasis**:
-
-define if bracket qty should be calculated through qty, profit, or through percentage. If QUANTITY is selected, and you set quantityBasisValue to 2, then each bracket will place a resting order of qty 2. if PERCENT is selected, position qty is at 10, and quantityBasisValue is at .2, then each bracket will place a resting order of qty 2. Profit mode is explained below...
-
-#### PROFIT MODE:
-
-We felt that this required its in own explanation, as it very powerful and quite nuanced. An extremely powerful part of Trade Unafraid is option management. However, you don't always know what the price of the option will be. It hurts to be stuck taking small 10 cent gains on 5$ options, or hoping for a huge move so your 1$ options make 25$. This would also be an extremely powerful tool in other circumstances that you don't know what the exact qty will be. The way this tactic works is as follows: you provide a target amount of profit you'd like to make per bracket, a stop amount to lose, and the number of brackets you'd like to create. Let's say you are trading long a 5$ option with 5 qty, in other words your cost basis is at 2500. You set up ratchet bracket profit mode as follows: 50$ target, 100$ stop, 2 brackets, and .2 percent trail qty. The setup would be configured as follows:
-
-An order with qty 2 at 5.25 limit, another order at qty 2 at 5.5 limit (leaving a trail qty of 1) would be placed.
-
-You would have a stop placed at 4.8. If the order was filled at 5.25, the stop would ratchet up to 5.05.
-
-Let's say instead though, that the option management chose a 1$ option, so you would have 25 qty, creating a cost basis of 2500. We would be prepared and the setup would be configured as follows:
-
-An order with qty 10 at 1.05 limit, another order at qty 10 at 1.1 limit (leaving a trail qty of 5) would be placed.
-You would have a stop placed at .96. If the order was filled at 1.05, the stop would ratchet up to 1.01.
-
-**NOTES ON THIS MODE**:
-1) Although the tradeplan view is specified in profit amounts, the soft order for the stop is placed in cents. The thinking is that if you wanted to quickly adjust the stop price, it be much easier to think in terms of how many cents do I want to adjust to, rather than what loss amount will equal a certain price.
-2) the stop cents (relative to previous target price), stays the same as the stop cents that are calculated when we first see the position. As an example, let's say your option position qty of 5 results in a stop cents of 20 in order to hit a 100$ loss, and your first bracket of 2 qty is filled, leaving you with a position with 3 qty. Although a 20 cent move will now only result in a 60$ loss (and a 33 cent move for 100$), we are assuming that you would rather have tighter stops and the simplicity of knowing the stop will be 20 cents every bracket.
-
-### Preserve Profit:
-
-Once the position has realized profit, we begin to watch the position to make sure that overall pnl does not fall below a user provided amount. This tactic attempts to essentially salvage a trade if things go very against you once they were doing well.
-
-**Ex**: Let's say preserve profit is set to 1, and you have realized gains so far of 100$. If you ever from there on have an unrealized loss of 99$ (100-99=1), the position will flatten.
-
-The field activationProfitAmount, says to wait until the realized pnl becomes a certain amount before watching for a retrace to the profit amount. This is useful if you have tight resting orders. If you have your first resting order for 5$ profit profit, and your preserve profit amount at 1$ overall profit, it would be very unfortunate if your unrealized pnl hit just -5$ and forced a flatten. If you set the activationProfitAmount field to 15$, it would wait till realized pnl has 15$ before activating.
-
-**NOTE**: unlike lossLimit, you provide us 1, for us to watch for a gain of 1. Additionally, we check that the activationProfitAmount can never be less than the loss limit amount, or else you'd result in an automatic close as the loss limit amount will be true instantly.
-
 
 
 ### Underlying Break Price/Break Price:
