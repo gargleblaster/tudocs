@@ -9,328 +9,94 @@ _This is a compilation of all tooltips from the original UI.  We will reorganize
 
 
 
-## Configuration:
-
-### Datasource:
-
-Select live for live trading. Simulated will create randomized stock price movement, starting from 100$ a share.
-
-#### Front Run / Evaluate Quotes:
-
-By Default, Trade Unafraid utilizes quotes in evaluating triggers. This is in order to try and give the user a small advantage by getting in early even if no trade has occurred at the trigger price. The idea is that if the quote breaks the price, it is very likely that an ensuing trade will as well. Uncheck this field to disable this front-run feature.
-
-Example: Let's say you have a break price of 100 to go long. If no trade above 100 occurs, but Trade Unafraid receives a quote of bid :99.95- ask: 100.01, the entry will trigger long on the break of 100 by the ask. Similarly, let's say you have a candle trail with a low of 99. If no trade below 99 occurs, but Trade Unafraid receives a quote of bid: 98.99-ask:99.01, the exit will trigger on the bid below the low of 99.
-
-#### Flatten at market close:
-
-This will flatten the existing trade plan a minute before market closes (around 3:59 for stocks)
-
-#### Repeating:
-
-Will try to repeat the trade plan once it has been completed.
-
-Ex: Let's say you believe that AAPL will bounce at 450 constantly throughout the day. If this is set to true, once your trade plan has completed and the position exited, we will try to play the bounce of 450 again.
-
-NOTE: We are currently only allowing this setup for setups Break Candle Type and Candle Pattern. We hope to continue to expand this functionality in the future.
-
-### RestartSettings:
-
-#### a)	Deactivate on restart
-
-a.	When a tradePlan restarts, deactivate the trade plan. A button will appear that will allow you to activate the trade plan when you feel ready
-
-#### b)	Max Loss:
-
-a.	If a repeating trade plan exceeds this loss, the trade plan will terminate
-
-#### c)	Max Attempts:
-
-a.	Once a repeating trade plan has run this many times, it will terminate
-
-#### d)	Max Minutes:
-
-a.	Once a repeating trade plan has run for this many minutes, it will terminate. Please note that this is evaluated at the close of a position for that trade plan. Therefore, if this value is set for 15, and a position is closed 13 minutes into the trade plan&aposs existence, it will still run once more.
-
-### Terminate When Flat:
-
-This feature is only be available if multiple entry tactic, or a position tactic + an entry tactic is selected
-
-By default, the trade plan will terminate once the position being traded closes. Unchecking this setting will prevent that. We will wait till all entry and position tactics are hit.
-
-Ex: Let's say a user sets a bounce with scaling in at 449.5 at 450 on AAPL, and the bounce results in an exit tactic at 449.75. By default the system will terminate then. Another example could be bounce at 450, into a market order and candle break, with the candle break being confirmation of the bounce. If the first position from the market order closes, perhaps you will want to wait to buy on a candle break anyways. If this is unchecked, the system will continue waiting until price hits 449.75.
-
-NOTE: use this with caution, as it will wait for every entry and position tactic to hit, which might occur much later on. It could be smarter to let the trade plan finish, and start another one with bounce at 449.5.
-
-### Persist if filter failed:
-
-By default, if a setup fails, either because of validation or because a setup filter fails, the tradePlan will terminate. This attribute will tell the system to hang in limbo, so that you can hit the enter now button if your ok with entering even though validation failed.
-
-An example of a failed validation would be if you try to trade the break of the previous daily high (with the candle trigger setup), but the price is already above the previous day high.
-
-An example of a failed setup filter would be if you utilize full time fame continuity, and one of the periods you have selected are not green (if long) or red (if short).
-
-Instead of terminating the trade plan, it will hang in limbo, and you can manually either enter now, or cancel, as you'd like.
 
 ## Setups:
 
 ### Orb:
 
-This setup is for trying to play an opening range breakout. If you are long, we place a trigger on the break of the first candle high. If short, we place a trigger on the break of the first candle low. The user defines if it is the 5min candles, 15 min candles, etc. This setup specifically watches for the first candle of the day, and never updates after.
+
 
 #### params:
 
-**Candle duration**: If you want to trade ORB based on the first 5 min candle, you would enter "5" in this field.
 
-**Break by**: If you want to give a little bit of space before triggering, set this field. For example, let's say the first candle high was 100. If you only want to enter the trade if the stock reaches 100.05, you would set this field to .05.
-
-**Note**: validation is applied. If you try and enter an orb setup long, and the stock is already above the first candle high, the trade plan will be cancelled.
 
 ### Ad hoc:
 
-This is tactic tells the system to go straight into entry tactics.
 
-Ex: if you dont want to utilize any of the setups, and would like to buy just on a break of a candle, you would set setup to adhoc, and entry tactic to candleBreak. If you would like to enter now, you can set the setup to Ad hoc, and the entry tactic to market order.
 
 ### Bounce:
 
-Triggers entry tactics on a bounce off a price.
 
-Ex: If AAPL is currently at 451, we can buy on a bounce at 450. If AAPL is currently at 449, we can short on a bounce at 450.
-
-**NOTE**: we attempt to validate the sensibility of the bounce, by terminating the trade plan if the bounce has already passed. For example, if you try to go long on a bounce at 450 when AAPL is at 449, the trade plan will be cancelled.
 
 ### Bounce EMA:
 
-track a series of EMA's and triggers entry tactics based on a bounce off the ema. If you are long and current price is 451 and the ema your tracking is 450, it will trigger the entry tactic upon hitting that ema.
+
 
 #### params:
 
-**candleDuration**: the length of the minute of the ema you'd like to track. So if you were tracking the 8 5min ema, the candle duration would be 5. Similarly with 21 5min ema, the candle duration would be 21.
 
-**periods**: the period of the ema you'd like to track. So if you were tracking the 8 5min ema, the period would be 8. Similarly with 21 5min ema, the candle duration would be 21. If you would like to trade multiple EMA's simultaneously, provide the emas in a comma separated list. So if you'd like to trade both the 8 and 21 5 min ema's at once, periods would be 8,21
-
-NOTE:
-1) We apply bounce validation, so that if you setup a long bounce off ema in which current price is below ema price, the trade plan will terminate.
-2) For each period you provide, we treat it as a seperate tradeplan. So the completion of the trade plan tracking the 8 ema, doesn't mean the 21 ema will cancel.
-3) We prevent systems from placing multiple purchases on ema's at similar times. So that if, while the 8 ema is attempting to open a position or is in a position, the 21 ema cannot open as well.
-
-
-   We calculate the ema based on when the market is open. If you use another platform and have pre market on, you might end up having a different EMA than us, since they might take into account pre market hours.
 
 ### Break:
 
-   triggers entry tactics on a break through a price.
 
-   Ex: If AAPL is currently at 449, we can buy on a break of 450. If AAPL is currently at 451, we can short on a break at 450.
-
-   NOTE: we attempt to validate the sensibility of the break, by terminating the trade plan if the break has already passed. For example, if you try to go long on a break at 450 when AAPL is at 451, the trade plan will be cancelled.
 
 ### Break EMA:
 
-   track a series of EMA's and triggers entry tactics based on a break of the ema. If you are long and current price is 449 and the ema your tracking is 450, it will trigger the entry tactic upon hitting that ema.
+
 
 ####    params:
 
-   **candleDuration**: the length of the minute of the ema you'd like to track. So if you were tracking the 8 5min ema, the candle duration would be 5. Similarly with 21 5min ema, the candle duration would be 21.
 
-   **periods**: the period of the ema you'd like to track. So if you were tracking the 8 5min ema, the period would be 8. Similarly with 21 5min ema, the candle duration would be 21. If you would like to trade multiple EMA's simultaneously, provide the emas in a comma separated list. So if you'd like to trade both the 8 and 21 5 min ema's at once, periods would be 8,21
-
-   **NOTE**:
-1) We apply break validation, so that if you setup a long break off ema in which current price
-   is above ema price, the trade plan will terminate.
-2) For each period you provide, we treat it as a seperate tradeplan. So the completion of the trade plan tracking the 8 ema, doesn't mean the 21 ema will cancel.
-3) We prevent systems from placing multiple purchases on ema's at similar times. So that if, while the 8 ema is attempting to open a position or is in a position, the 21 ema cannot open as well.
-
-
-   We calculate the ema based on when the market is open. If you use another platform and have pre market on, you might end up having a different EMA than us, since they might take into account pre market hours.
 
 ###    Candle Break Type:
 
-   This is a setup that looks for a specific type of candle, and looks to break this candle. Whether that means your goal is break the last shooter or the last red candle, this is what this setup hopes to achieve. At the moment, we have only implemented breaking the last red or green candle. If your tradePlan is configured for a long trade, you are attempting to break the high of the candle, if short, you are attempting to break the low of the candle.
+
 
 ####    params:
 
-   **CandleType**: The type of candle you would like to trade. Right now, LAST is the only available option, representing trading the last candle of a certain color.
 
-   **CandleColor**: The color of the candle you would like to trade. Right now, there is red or green. By selecting candleType of LAST and color candle of red, you can configure the setup to look to only trade based on the last red candle.
-
-   **candleDuration**: the duration of the candle you'd like to track.
-
-   **breakBy**: the amount the previous candle high/low needs to be broken by to enter. If long and the previous candle high was 100, and this field is set to .1, it will wait till a break of 100.1 to enter.
-
-   **filterForToday**: Sometimes, you might enter this tradePlan before a red candle has occurred during the day (say if you enter the tradePlan before the open). Our default behavior will be to look for the last red candle from the day prior, and set a trigger based on that. This filter will ensure that you only set a trigger based on today's candles.
-
-   **Note**:
-
-   If when you attempt to use this tactic, the current price is above the candle that you are tracking if long, or below the candle if short, the software will know to wait until the next time an appropriate candle occurs. This means you can leave this strategy running all day by unchecking the field "Restart System Once Position Has Flattened". Additionally, please note that if the trade is cancelled for other reasons, such as a failed option spread when trying to trade, or a failed filter, the trade plan will be terminated.
-
-   We calculate hours by market open, 9:30 am. If you use another platform and have pre market on, you might end up having a different candle open time than us. For example, if you trade the hour charts and have premarket on on TOS, the hourly candle starts at 9:00 am, since they are calculating since 4 am. As of now, we are always starting from 9:30 am.
 
 ###    Candle Pattern:
 
-   This setup allows you to watch for a pattern of candles, and trigger if the pattern is achieved. If you want to trade the first inside candle, and then break high, you would tell the software to look for an INSIDE CANDLE, and then a BREAK HIGH. When the break high is hit, the entry tactics will trigger.
 
-####    Candle definitions:
 
-   **INSIDE CANDLE (1)**: A candle in which the high and low are within the previous candle. Let's say candle1 has a high of 101 and a low of 99. If candle 2 has a high of 101 or less, and a low of 99 or more, it is an inside candle. If it has a high of 101.1 and a low of 99.2, it is not an inside candle.
-
-   **OUTSIDE CANDLE (3)**: A candle in which the high and low extend past the previous candle. Let's say candle1 has a high of 101 and a low of 99. If candle 2 has a high of more than 101, and a low of less than 99, it is an outside candle. If it has a high of 101.1 and a low of 99, it is not an outside candle.
-
-   **BREAK HIGH (2u)**: A candle in which just the high of the previous candle is broken. If the low is also broken, this is not considered valid. Let's say candle1 has a high of 101 and a low of 99. If candle 2 has a high of more than 101, and a low of 99 or more, it is a break high candle. If it has a high of less than 101, or a low of less than 99, it is not a break high candle.
-
-   **BREAK LOW (2d)**: A candle in which just the low of the previous candle is broken. If the high is also broken, this is not considered valid. Let's say candle1 has a high of 101 and a low of 99. If candle 2 has a low of less than 99, and a high of 101 or less, it is a break low candle. If it has a low of more than 99, or a high of more than 101, it is not a break low candle.
-
-   **FAIL BREAK HIGH (fbh)**: A candle in which the high of the previous candle is not broken. Let's say candle1 has a high of 101. If candle 2 has a high of less than 101, it is a fail break high candle. If it has a high of more than 101, it is not a break high candle.
-
-   **FAIL BREAK LOW (fbl)**: A candle in which the low of the previous candle is not broken. Let's say candle1 has a low of 99. If candle 2 has a low of more than 99, it is a break low candle. If it has a low of less than 99.
-
-   **BREAK CANDLE (2)**: This is to look for a break of either the high or low of previous candle. This can only be added as the last sequence in a pattern. So for example, you can configure a 1-2, and this will look for an inside candle, and enter the position on either the break of the high or the break of the low of the previous candle
-
-   **Note**:
-1) The first sequence is set to keep retrying until the first sequence is achieved.
-2) If the pattern fails, the sequence will be restarted. So if you are looking for a 2d-1-2u setup, and on sequence 2u the pattern fails, we begin again at 2d.
-3) There is some "look back" functionality to this setup if a sequence fails. For example, if you are looking for a 2d-1-2u setup, and while you are at sequence "1", the next candle is a 2d candle instead, the tradePlan will recognize that the 2d was achieved, and keep looking for a "1".
-
-We calculate hours by market open, 9:30 am. If you use another platform and have pre market on, you might end up having a different candle open time than us. For example, if you trade the hour charts and have premarket on on TOS, the hourly candle starts at 9:00 am, since they are calculating since 4 am. As of now, we are always starting from 9:30 am.
-
-   The notion of 1's, 2's, and 3's comes from Rob Smith's The Strat. The Strat has many resources and a very active community. Refer to https://twitter.com/RobInTheBlack and https://twitter.com/search?q=%23TheStrat&src=hashtag_click to learn more.
+##
 
 ### Candle Trigger:
 
-Create entry tactics based on a break a previous or current candle. If goLong is true, will look for break of candle high. if goShort is true, will try look for break of candle low. (both go long and go short can be selected).
+
 
 #### params:
 
-**timeUnit**: determine the time unit of the candle you'd like to trade, between minutes, days, weeks, and months. If you choose day and click current, you are looking for a break of the current day's candle. If you choose weeks and set candles back to 1, you are looking for a break of last week's candle.
 
-**candlesBack**: # of candles back to determine which candle you'd like to have the break occur on. For example, if you select 0 and days, you are looking for a break of today's candle. If you select 1 and weeks, you are looking for a break of last week's candle. A last example is if you select 2 and months, in which you would look for a break of the candle occurring 2 months ago. If you select minutes, you must choose the previous candle.
-
-**candle duration**: the duration of time unit's candle. If you'd like 15 minute candles, set this to 15. If you want 3 day candles, set this to 3.
-
-**validate candle**: With most tactics, we apply validation to check if the setup is possible. For example, we reject a bounce setup if the price has already passed the bounce price. Or with a candle break entry tactic, we reject the setup if you are long, and price is already above candle high. Here, we provide you the option to choose whether you want to do that. It might be your preference to go right into entry tactics if the current has already passed yesterday's low/high.
-
-**breakBy**: the amount the previous candle high/low needs to be broken by to enter. If long and the previous candle high was 100, and this field is set to .1, it will wait till a break of 100.1 to enter.
-
-**NOTE**:
-
-If time unit minutes are selected, then the tactic will behave like the entry tactic candleBreak, in that it will update the trigger with each incoming candle. For example, let's say you are long and trading 15 minute candles. The first high comes in at 100. If the high is never broken, and the next 15 min candle only has a high of 99.5, the trigger will be adjusted to 99.5.
-
-We calculate hours by market open, 9:30 am. If you use another platform and have pre market on, you might end up having a different candle open time than us. For example, if you trade the hour charts and have premarket on on TOS, the hourly candle starts at 9:00 am, since they are calculating since 4 am. As of now, we are always starting from 9:30 am.
 
 ### Conviction Candle:
 
-This is a setup designed for strategies based on the opening candle.
+
 
 #### parameters:
 
-**candleDuration**: minute duration per candle. 5 for a 5 minute candles.
 
-**Minimum first candle height**: Often, a setup like this will require some amount of volatility at the open. Set this parameter to define the min height of the first candle.
-
-**rightColorCandle**: If long, the first candle close must be above open. If short, the close must be below open.
-
-**Candle close pct**: Enforce that the first candle close must be a certain percentage of the candle height.
-
-EX: if the first candle has: o: 99.25, l: 99, h:100, c: 99.3. It can very disadvantageous to buy well be on a break of 100, because of the length needed to travel to reach that height and the bearish nature of the first candle. We could set candle close pct to 60%, and we would not trigger a long unless the candle closed above 99.6
-
-**Permitted Gap Pct**: Ensure that the open is in the direction that you want the trade to be in. Set the minimum the gap must be. If your gap is .25, then the open must be at least .25% in the direction that your trade will be. If your gap is -.25, then the open must be at least -.25% in the direction that your trade will be. Let's say AAPL closes the previous day at 450, and opens the next at 449. Setting permittedGapPct can prevent a buy on a false positive first candle, that reverses quickly after breaking the high.
-
-**NOTE**:
-
-We calculate hours by market open, 9:30 am. If you use another platform and have pre market on, you might end up having a different candle open time than us. For example, if you trade the hour charts and have premarket on on TOS, the hourly candle starts at 9:00 am, since they are calculating since 4 am. As of now, we are always starting from 9:30 am.
 
 ### Flag:
 
-This is a setup that attempts to trigger the entry tactics only once a sequence of candles have been completed. If long, the sequence is as follows: candle break high, candle fail to break high, candle break high. If short, the sequence is as follows: candle break low, candle fail to break low, candle break low. If you are unsure about direction, both goLong and goShort can be applied, and it will track each sequence separately.
 
-#### Explaining the sequence:
 
-This is an example of a series of candles to achieve the break long, with some commentary to explain some of the nuances:
 
-firstCandle: open: 100, high: 100.2, low: 99.8, close: 100.
-
-Once this candle arrives, it will start to look for a break high of this candle. Whether breaking the first candle is a must is configurable (check param fail on first candle). You can elect that the tradePlan is terminated if this is not achieved, or whether it waits for a candle to actually break.
-
-secondCandle: open: 100, high: 100.3, low: 99.8, close: 100.2.
-
-In this scenario, the second candle breaks the first candle, and we will continue to the next sequence, fail to break high. In this sequence, we are waiting for a candle that does not break its previous high.
-
-thirdCandle: open: 100.2, high: 100.4, low: 100.1, close: 100.3.
-
-The next candle that comes in broke its previous high. Therefore we will wait for next candle to not break the high.
-
-fourthCandle: open: 100.3, high: 100.3, low: 100.1, close: 100.2.
-
-This candle does not break its previous high (100.4 versus 100.3). We move onto the next sequence, which is a break high. Once this break high is achieved, we will trigger the entry tactics.
-
-fifthCandle: open: 100.2, high: 100.25, low: 100.1, close: 100.2.
-
-The high is not broken, so our price to break is adjusted down from 100.3 to 100.25. If 100.3 had been passed, the entry tactics would have been triggered.
-
-sixthCandle
-
-If during this candle price breaks 100.25, we will trigger entry tactics.
 
 #### parameters:
 
-**fail on first candle**:
 
-It could be your preference that the second candle has to break the first candle's high (if long) in order to launch the setup, or you could be comfortable waiting until a high is finally achieved. If this is checked, it will terminate the tradePlan if the high is not broken. If unchecked, it will sit and wait.
-
-**wait until current candle closes**:
-
-If this is checked, then we will look for a break of previous candle. If unchecked, then we will wait for break of current candle.
-
-wait until current candle closes _unchecked_ example:
-
-Let's say it is currently 9:35:30 seconds, and you see the candle that began at 9:34 (9:34-9:35) was a spike, and therefore you'd like to apply a flag based on that candle. You would leave this uncheck, and when the 9:35-9:36 candle comes in at 9:36, we will look to see if that candle broke the 9:34 candle, and then proceed to the next candle sequence.
-
-wait until current candle closes _checked_ example:
-
-Let's say it is currently pre-market. You would like to trade a flag based on the 9:30 5min candle, but don't want to sit there waiting till 9:36 (if trading 5 minute candles) to enter this system . You would check this field, and once the 9:30 candle completes, it will, with the next candle, look for a break.
-
-**candleDuration**:
-
-the duration of the candles that you are running this setup on (1min, 5min...)
-
-**breakBy**:
-
-The amount of leniency provided at the edges of the candles. If try to break a candle, the price to break to achieve this sequence would be high/low +/- breakBy. So if high is 141, low is 139, and breakBy is .1, the price to break for high would be 141.1, for low 138.9. When you are attempting to fail to break the high, it gives more room to not break the high. So if, with the above example, price reached 141.05 and then showed resistance, the candle would achieve the sequence of fail to break high.
-
-**NOTE**:
-
-We calculate hours by market open, 9:30 am. If you use another platform and have pre market on, you might end up having a different candle open time than us. For example, if you trade the hour charts and have premarket on on TOS, the hourly candle starts at 9:00 am, since they are calculating since 4 am. As of now, we are always starting from 9:30 am.
 
 ## Entry Tactics:
 
 ### Candle Break:
 
-Open a position upon a break of the trigger candle, once the setup has been achieved. Will go long on a break of trigger candle high, and short on break of prev candle low. Ex: Let's say you are confident that if AAPL will achieve a bounce at 450. However, you only want to buy with confirmation. Once AAPL hits 450, it will set off this tactic. Let's say the previous candle was o: 450.5, h: 450.75 l :450.25, c: 450.5. Upon the break of 450.75, we will place a market/work Order. As the following candles come in, the break high trigger will adjust lower. So if the current candle ends up having a high of 450.25, the high to break will adjust to 450.25. The same is true with short, except that it looks at candle low and adjusts upwards.
+
 
 #### params:
 
-**candleDuration**: the duration of the candle you'd like to track.
 
-**QuantityBasisValue**: the amount you'd like to invest based on the QuantityBasis (dollars, quantity) that you chose. So if you would like to make an investment of max 1000$, the quantity basis would be dollars, and the quantityBasisValue would be 1000$. Similarly, if QuantityBasis of Quantity was chosen, and you'd like to buy 5 contracts/shares, this param would be set to
-5.
-
-**wait until current candle closes**: determine which candle to set the triggers based on.
-
-wait until current candle closes _unchecked_: set the triggers based on the previous candle.
-
-Ex: Let's say that the bounce occurs at 10:27. We will use the high from the candle beginning at 10:20 (10:20-10:25) to determine the high to break.
-
-wait until current candle closes _checked_: set the triggers based on the current candle. We wait for the candle to complete, and then set the triggers.
-
-**Ex**: Let's say you want to trade a fed announcement at 2 pm using 1 minute candles. If you enter this tactic at any time between 2:00 and 2:01, it will wait for the 2 pm candle to complete and set the triggers based on that candle. Once it is 2:01, the tactic will activate, and look for a break of the 2 pm candle. Similarly, let's say you want to trade a break of AAPL at 500, but you want confirmation of the break first. You can use a candle break entry tactic, with the trigger candle set to current. It will wait for the candle in which the break occured to complete, and only enter once it has broken that candle.
-
-**breakBy**: the amount the previous candle high/low needs to be broken by to enter. If long and the previous candle high was 100, and this field is set to .1, it will wait till a break of 100.1 to enter.
-
-**NOTE**:
-
-validation is applied. If you set triggerCandle to previous try go long and the current price is above previous candle high (ie which would automatically set the order), we cancel the tradingSystem
-
-We calculate hours by market open, 9:30 am. If you use another platform and have pre market on, you might end up having a different candle open time than us. For example, if you trade the hour charts and have premarket on on TOS, the hourly candle starts at 9:00 am, since they are calculating since 4 am. As of now, we are always starting from 9:30 am.
 
 ### Limit Order:
 
