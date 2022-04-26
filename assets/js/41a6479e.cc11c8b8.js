@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktudocs=self.webpackChunktudocs||[]).push([[1978],{3701:function(e){e.exports=JSON.parse('{"name":"flag","permalink":"/tudocs/tags/flag","docs":[{"id":"Reference/Setups/flag","title":"Flag Setup","description":"Overview","permalink":"/tudocs/Reference/Setups/flag"}],"allTagsPath":"/tudocs/tags"}')}}]);

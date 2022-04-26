@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktudocs=self.webpackChunktudocs||[]).push([[5570],{1590:function(e){e.exports=JSON.parse('{"name":"break","permalink":"/tudocs/tags/break","docs":[{"id":"Reference/Setups/break","title":"Break Setup","description":"Overview","permalink":"/tudocs/Reference/Setups/break"}],"allTagsPath":"/tudocs/tags"}')}}]);

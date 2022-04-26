@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktudocs=self.webpackChunktudocs||[]).push([[5090],{6610:function(e){e.exports=JSON.parse('{"name":"orb","permalink":"/tudocs/tags/orb","docs":[{"id":"Reference/Setups/orb","title":"Opening Range Breakout Setup","description":"Overview","permalink":"/tudocs/Reference/Setups/orb"}],"allTagsPath":"/tudocs/tags"}')}}]);

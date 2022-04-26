@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktudocs=self.webpackChunktudocs||[]).push([[6907],{3606:function(e){e.exports=JSON.parse('{"name":"bounce EMA","permalink":"/tudocs/tags/bounce-ema","docs":[{"id":"Reference/Setups/bounce_ema","title":"Bounce EMA Setup","description":"Overview","permalink":"/tudocs/Reference/Setups/bounce_ema"}],"allTagsPath":"/tudocs/tags"}')}}]);

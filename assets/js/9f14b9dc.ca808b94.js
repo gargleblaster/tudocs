@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktudocs=self.webpackChunktudocs||[]).push([[1759],{4571:function(e){e.exports=JSON.parse('{"name":"bounce","permalink":"/tudocs/tags/bounce","docs":[{"id":"Reference/Setups/bounce","title":"Bounce Setup","description":"Overview","permalink":"/tudocs/Reference/Setups/bounce"}],"allTagsPath":"/tudocs/tags"}')}}]);

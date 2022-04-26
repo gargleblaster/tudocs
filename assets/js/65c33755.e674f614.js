@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktudocs=self.webpackChunktudocs||[]).push([[3749],{204:function(e){e.exports=JSON.parse('{"name":"adhoc","permalink":"/tudocs/tags/adhoc","docs":[{"id":"Reference/Setups/adhoc","title":"Ad Hoc Setup","description":"Overview","permalink":"/tudocs/Reference/Setups/adhoc"}],"allTagsPath":"/tudocs/tags"}')}}]);

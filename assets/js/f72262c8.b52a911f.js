@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktudocs=self.webpackChunktudocs||[]).push([[6551],{6951:function(e){e.exports=JSON.parse('{"name":"break EMA","permalink":"/tudocs/tags/break-ema","docs":[{"id":"Reference/Setups/break_ema","title":"Break EMA Setup","description":"Overview","permalink":"/tudocs/Reference/Setups/break_ema"}],"allTagsPath":"/tudocs/tags"}')}}]);
