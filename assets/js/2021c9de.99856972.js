@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktudocs=self.webpackChunktudocs||[]).push([[4115],{5334:function(s){s.exports=JSON.parse('{"name":"position tactics","permalink":"/tudocs/tags/position-tactics","docs":[{"id":"TradePlans/position-tactics","title":"Position Tactics","description":"","permalink":"/tudocs/TradePlans/position-tactics"}],"allTagsPath":"/tudocs/tags"}')}}]);
