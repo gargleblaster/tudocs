@@ -1,10 +1,10 @@
 ---
-sidebar_position: 5
+sidebar_position: 10
 tags: ["options"]
 ---
 # Option Selection
 
-Option selection occurs in two phases, first at the creation of the Trade Plan, but then also at the time of entry. The most important thing to be aware of is that at the time of entry, by regulatory rules, we can **only** select from those option strikes and expirations that you have already approved when creating the Trade Plan.
+Option selection occurs in two phases, first at the creation of the Trade Plan, but then also at the time of entry. The most important thing to be aware of is that at the time of entry, by regulatory rules, we can **only** select from those option contracts (expirations and strikes) that you have already approved when creating the Trade Plan.
 
 ### Option "Approval"
 ![img_2.png](img_2.png)
