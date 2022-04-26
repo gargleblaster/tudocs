@@ -30,7 +30,7 @@ Trade Plans can be configured such that Long and Short are both active at the sa
 
 If time unit minutes are selected, then the tactic will behave like the entry tactic candleBreak, in that it will update the trigger with each incoming candle. For example, let's say you are long and trading 15 minute candles. The first high comes in at 100. If the high is never broken, and the next 15 min candle only has a high of 99.5, the trigger will be adjusted to 99.5.
 
-We calculate hours by market open, 9:30 am. If you use another platform and have pre market on, you might end up having a different candle open time than us. For example, if you trade the hour charts and have premarket on on TOS, the hourly candle starts at 9:00 am, since they are calculating since 4 am. As of now, we are always starting from 9:30 am.
+We calculate hours by market open, 9:30 am. If you use another platform and have pre market on, you might end up having a different candle open time than us. For example, if you trade the hour charts and have premarket on in TOS, the hourly candle starts at 9:00 am, since they are calculating since 4 am. As of now, we are always starting from 9:30 am.
 
 ## Example
 

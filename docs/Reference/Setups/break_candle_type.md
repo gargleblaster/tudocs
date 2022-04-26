@@ -24,7 +24,7 @@ This is a setup that looks for a specific type of candle, and looks to break thi
 
 If when you attempt to use this tactic, the current price is above the candle that you are tracking if long, or below the candle if short, the software will know to wait until the next time an appropriate candle occurs. This means you can leave this strategy running all day by unchecking the field "Restart System Once Position Has Flattened". Additionally, please note that if the trade is cancelled for other reasons, such as a failed option spread when trying to trade, or a failed filter, the trade plan will be terminated.
 
-We calculate hours by market open, 9:30 am. If you use another platform and have pre market on, you might end up having a different candle open time than us. For example, if you trade the hour charts and have premarket on on TOS, the hourly candle starts at 9:00 am, since they are calculating since 4 am. As of now, we are always starting from 9:30 am.
+We calculate hours by market open, 9:30 am. If you use another platform and have pre market on, you might end up having a different candle open time than us. For example, if you trade the hour charts and have premarket on in TOS, the hourly candle starts at 9:00 am, since they are calculating since 4 am. As of now, we are always starting from 9:30 am.
 
 ## Example
 

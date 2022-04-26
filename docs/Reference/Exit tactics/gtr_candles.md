@@ -24,7 +24,7 @@ The idea behind this tactic is to catch headFakes on candles, in which a breakou
 Let's say you enter a long position in AAPL, and the previous candle high is 450.25, and the low is 449.5. Let's say you have a right direction pct of 0, and retrace pct of 60%. To this tactic that would mean: once AAPL breaks 450.25, look to flatten if it falls to 449.8. With each incoming candle, this tactic resets its triggers. So let's say the next candle has high of of 450.75, and low of 450. We will now say: once AAPL breaks 450.75, we should flatten if the stock retraces back to 450.3, which is a 60% retracement from the high.
 
 ## Notes
-We calculate hours by market open, 9:30 am. If you use another platform and have pre market on, you might end up having a different candle open time than us. For example, if you trade the hour charts and have premarket on on TOS, the hourly candle starts at 9:00 am, since they are calculating since 4 am. As of now, we are always starting from 9:30 am.
+We calculate hours by market open, 9:30 am. If you use another platform and have pre market on, you might end up having a different candle open time than us. For example, if you trade the hour charts and have premarket on in TOS, the hourly candle starts at 9:00 am, since they are calculating since 4 am. As of now, we are always starting from 9:30 am.
 
 ## See also
 [Green-to-Red Position](gtr_positions.md)

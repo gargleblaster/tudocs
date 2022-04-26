@@ -31,7 +31,7 @@ wait until current candle closes _checked_: set the triggers based on the curren
 
 validation is applied. If you set triggerCandle to previous try go long and the current price is above previous candle high (ie which would automatically set the order), we cancel the tradingSystem
 
-We calculate hours by market open, 9:30 am. If you use another platform and have pre market on, you might end up having a different candle open time than us. For example, if you trade the hour charts and have premarket on on TOS, the hourly candle starts at 9:00 am, since they are calculating since 4 am. As of now, we are always starting from 9:30 am.
+We calculate hours by market open, 9:30 am. If you use another platform and have pre market on, you might end up having a different candle open time than us. For example, if you trade the hour charts and have premarket on in TOS, the hourly candle starts at 9:00 am, since they are calculating since 4 am. As of now, we are always starting from 9:30 am.
 
 ## Example
 
