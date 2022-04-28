@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktudocs=self.webpackChunktudocs||[]).push([[6157],{5137:function(t){t.exports=JSON.parse('{"name":"option selection","permalink":"/tudocs/tags/option-selection","docs":[{"id":"TradePlans/option-selection","title":"Option Selection","description":"","permalink":"/tudocs/TradePlans/option-selection"}],"allTagsPath":"/tudocs/tags"}')}}]);
