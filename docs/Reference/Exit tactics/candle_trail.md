@@ -12,7 +12,9 @@ If the position direction is **Long**, and the current price breaches the **prev
 
 If the position direction is **Short**, and the current price breaches the **previous candle high**, the position will flatten.
 
-<iframe width="450" height="450" src="https://curious-cassata-b5efed.netlify.app" title="Candle Trail" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+| Candle Trail in Action                                                                                                                                                                                                                                             |                                                                                                                                                                             |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <iframe width="250" height="250" src="https://curious-cassata-b5efed.netlify.app/candletrail.html" title="Candle Trail" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> | As each candle completes, the Candle Trail stop is moved to the low of that completed candle.  (In a short trade, the stop would be moved to the high of the prior candle.) |
 
 ## Parameters
 ![candletrailconfig.png](/img/candletrailconfig.png)

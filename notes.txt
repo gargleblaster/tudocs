@@ -3,3 +3,8 @@
 3. Figure out use of Google Tag Manager with Docusaurus
 4. Embed screencasts?
 5.
+
+
+To deploy:
+cmd /C "set GIT_USER=gargleblaster&& yarn deploy"
+
