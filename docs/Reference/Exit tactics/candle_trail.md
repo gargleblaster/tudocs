@@ -12,7 +12,7 @@ If the position direction is **Long**, and the current price breaches the **prev
 
 If the position direction is **Short**, and the current price breaches the **previous candle high**, the position will flatten.
 
-
+<iframe width="450" height="450" src="https://curious-cassata-b5efed.netlify.app" title="Candle Trail" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Parameters
 ![candletrailconfig.png](/img/candletrailconfig.png)
