@@ -29,15 +29,29 @@ When you are ready, click the **Export Template** button. You will be provided w
 
 To retrieve the code for a template you have shared in the past, simply select it from the dropdown menu and the code and the same share options will appear.
 
+Starting at 3:30, this video explains how to share a Trade Plan template using a raw code, a descriptive message, or via Twitter.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/c8XCOOtAfis?start=211" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### Import
 This button will allow you to import another user's template and optionally load it in to your trade plan form. Once you have obtained the code for a desired template, push the **Import** button. You will be shown a window that will prompt you for the template code. Enter the code and push **Import** to view pertinent information attached to the template code. Once you have determined that you would like to use the template, push **Load Template to Form** to fill your trade plan form with the shared template. If you want to save this template without having to import it again, make sure to **Save** it. This will add it to your own trade plan templates as if were your own.
 
 You are welcome to make any changes to imported templates. Your changes will not affect the shared template, only your personal copy of it.
 
-*Please be mindful when using shared templates as they may be missing important information or may contain settings that you are not familiar with. Always be sure to review the form before you create the trade plan to ensure it will behave as expected.*
+:::warn Important
+
+Please be mindful when using shared templates as they may be missing important information or may contain settings that you are not familiar with. Always be sure to review the form before you create the trade plan to ensure it will behave as expected and intended.
+
+:::
+
+This video explains how to import another trader's shared template into your Trade Unafraid environment.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CZ9Ld9lIfGQ?start=211" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Create Trade Plan
 This button will activate the **current trade plan** as it appears in the form. Keep in mind that software does exactly what you tell it to do, so be certain that the contents of the form reflect your intentions.
+
+:::tip Make sure your Trade Plan does what you intend
 
 Things to check before creating a trade plan:
 - Are you trading sim or real money?
@@ -49,3 +63,6 @@ Things to check before creating a trade plan:
     - Are your stops appropriate to limit your risk?
     - Are your stops too tight for the spread and front-run settings, where you might stop out immediately?
 - Do you have repeating set the way that you intend?
+- Is Flatten at Close set the way you intend?
+
+:::

@@ -12,3 +12,4 @@ Trade Unafraid Alerts functionality is already embedded into Trade Unafraid.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vfVe-5d4zCA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<iframe width="560" height="315" src="https://www.loom.com/embed/17c6c036418c40899d4f54ea6e06d388" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
