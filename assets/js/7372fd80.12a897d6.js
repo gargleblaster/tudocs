@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktudocs=self.webpackChunktudocs||[]).push([[7884],{2338:function(t){t.exports=JSON.parse('{"name":"The Strat","permalink":"/tudocs/tags/the-strat","docs":[{"id":"Recipes/thestrat","title":"The Strat Cookbook","description":"Revstrats","permalink":"/tudocs/Recipes/thestrat"}],"allTagsPath":"/tudocs/tags"}')}}]);

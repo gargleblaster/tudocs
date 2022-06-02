@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktudocs=self.webpackChunktudocs||[]).push([[2089],{3945:function(s){s.exports=JSON.parse('{"name":"ORBs","permalink":"/tudocs/tags/or-bs","docs":[{"id":"Recipes/orbs","title":"Opening Range Breakouts Cookbook","description":"ORBs","permalink":"/tudocs/Recipes/orbs"}],"allTagsPath":"/tudocs/tags"}')}}]);
